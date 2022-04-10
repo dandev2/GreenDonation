@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout::layout(~{::#main})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Writer matching</title>
+</head>
+<body>
+<div id="main">
+
+  <h2>작가 매칭 신청</h2>
+  <form th:action="@{/api/design/matching}" enctype="multipart/form-data" method="post">
+    <label>이름</label><input type="text" placeholder="제목" name="designName"><br>
+    <label>디자인 설명</label><br><textarea id="designEx" cols="50" rows="10" placeholder="본문" name="designEx"></textarea><br>
+    <label>이미지<input type="file" name="designImagePath"  accept="image/jpeg"></label><br>
+    <label>카테고리<select name="category">
+      <option value=1>가방</option>
+      <option value=2>의류</option>
+      <option value=3>지갑</option>
+    </select></label><br>
+    <label>소재<select name="material">
+      <option value=1>가죽</option>
+      <option value=2>천</option>
+    </select></label><br>
+
+    <!--    /**-->
+    <!--    * TODO 소재 select 타입으로 작성하기-->
+    <!--    */-->
+  </form>
+  <h3>컨설팅 신청</h3>
+  <form th:action="@{/api/design/matching}" enctype="multipart/form-data" method="post">
+    <label>신청 지역(구)</label><input type="text" placeholder="장소" name="consultingPlace"><br>
+    <label>시작 시간</label><input type="number" placeholder="시작시간"  name="consultingStartingTime"><br>
+    <label>종료 시간</label><input type="number" placeholder="종료시간"  name="consultingEndTime"><br>
+    <button id="apply">작가 조회</button>
+
+  </form>
+
+  <script th:inline="javascript">
+    $('#apply').click(function () {
+
+
+
+    });
+  </script>
+
+</div>
+
+</body>
+</html>

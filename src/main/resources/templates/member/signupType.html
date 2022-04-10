@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout::layout(~{::#main})}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="main">
+<a th:href="@{/member/generalSignup}"><button>일반</button></a>
+
+<a th:href="@{/member/generalSignup}"><button>작가</button></a>
+<a th:href="@{/member/generalSignup}"><button>업체</button></a>
+
+</div>
+</body>
+</html>

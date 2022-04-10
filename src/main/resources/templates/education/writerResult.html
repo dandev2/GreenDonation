@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout::layout(~{::#main})}">
+<head>
+    <meta charset="UTF-8">
+    <title>강사정보</title>
+</head>
+<body>
+<div id="main">
+
+<div th:each="i:${info2}">
+    <div th:text="${i.memberCode.memberName}"></div>
+    <div th:text="${i.trainingTopic}"></div>
+    <div th:text="${i.availableDay}"></div>
+    <div th:text="${i.writerLecturePlace}"></div>
+</div>
+<div th:each="l:${lecture}">
+    <p th:text="'강의명: '+${l.lectureName}"></p>
+    <p th:text="'날짜: '+${l.lectureDate}"></p>
+    <p th:text="'장소: '+${l.lecturePlace}"></p>
+    <p th:text="'신청인원: '+${l.applicationNumber}+' / '+${l.lecturePersonnel}"></p>
+    <p th:if="${l.lectureAvailability}==1">신청가능</p>
+</div>
+</div>
+
+</body>
+</html>

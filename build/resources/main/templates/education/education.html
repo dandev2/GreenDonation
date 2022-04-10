@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout::layout(~{::#main})}">
+<head>
+    <meta charset="UTF-8">
+    <title>맞춤교육</title>
+</head>
+<body>
+<div id="main">
+    <p>맞춤교육이에요.</p>
+    <button><a th:href="@{'/education/shareedu/'}">나눔교육</a></button>
+    <button><a th:href="@{'/education/fitedu/'}">맞춤교육</a></button>
+</div>
+
+</body>
+</html>
